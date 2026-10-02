@@ -1,0 +1,181 @@
+"use client";
+
+import { useState } from "react";
+
+const products = [
+  {
+    id: 1,
+    name: "Bluetooth Speaker",
+    price: "25,000 RWF",
+    icon: "🔊",
+  },
+  {
+    id: 2,
+    name: "Wireless Headphones",
+    price: "30,000 RWF",
+    icon: "🎧",
+  },
+  {
+    id: 3,
+    name: "Smart Watch",
+    price: "35,000 RWF",
+    icon: "⌚",
+  },
+  {
+    id: 4,
+    name: "USB Charger",
+    price: "8,000 RWF",
+    icon: "🔌",
+  },
+  {
+    id: 5,
+    name: "Power Bank",
+    price: "20,000 RWF",
+    icon: "🔋",
+  },
+  {
+    id: 6,
+    name: "LED TV",
+    price: "250,000 RWF",
+    icon: "📺",
+  },
+];
+
+export default function Home() {
+  const [cart, setCart] = useState([]);
+
+  function addToCart(product) {
+    setCart((currentCart) => [...currentCart, product]);
+  }
+
+  return (
+    <>
+      <header className="header">
+        <div className="container nav">
+          <a href="#home" className="logo">
+            SANDE <span>ELECTRONIC</span>
+          </a>
+
+          <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <button className="cart">
+            🛒 Cart <b>{cart.length}</b>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section className="hero" id="home">
+          <div className="container hero-grid">
+            <div>
+              <p className="tag">SANDE ELECTRONIC</p>
+
+              <h1>
+                Electronics
+                <br />
+                <span>Made Simple.</span>
+              </h1>
+
+              <p className="hero-text">
+                Welcome to SANDE ELECTRONIC. Find quality electronic
+                products at affordable prices in Rwanda.
+              </p>
+
+              <a href="#products" className="btn">
+                Shop Now →
+              </a>
+            </div>
+
+            <div className="hero-card">
+              <div className="hero-icon">📱</div>
+              <h2>TECH</h2>
+              <p>Quality electronics</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="products" id="products">
+          <div className="container">
+            <div className="section-head">
+              <div>
+                <p className="tag">OUR PRODUCTS</p>
+                <h2>Popular Products</h2>
+              </div>
+
+              <p>Quality electronics for everyday life.</p>
+            </div>
+
+            <div className="grid">
+              {products.map((product) => (
+                <article className="product" key={product.id}>
+                  <div className="product-image">{product.icon}</div>
+
+                  <div className="product-info">
+                    <h3>{product.name}</h3>
+                    <strong>{product.price}</strong>
+
+                    <button
+                      className="add"
+                      onClick={() => addToCart(product)}
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="about" id="about">
+          <div className="container about-grid">
+            <div>
+              <p className="tag">ABOUT US</p>
+              <h2>SANDE ELECTRONIC</h2>
+            </div>
+
+            <div>
+              <p>
+                We provide electronic products with a simple and
+                convenient online shopping experience.
+              </p>
+
+              <p>
+                Our goal is to make electronics accessible to customers
+                in Rwanda and beyond.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="contact" id="contact">
+          <div className="container">
+            <p className="tag">CONTACT</p>
+            <h2>Get in touch</h2>
+
+            <p>
+              Have a question about a product or an order?
+              Contact SANDE ELECTRONIC.
+            </p>
+
+            <a href="mailto:info@sandeelectronic.com" className="btn dark">
+              Contact Us
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div className="container footer-inner">
+          <strong>SANDE ELECTRONIC</strong>
+          <span>© 2026 SANDE ELECTRONIC. All rights reserved.</span>
+        </div>
+      </footer>
+    </>
+  );
+}
