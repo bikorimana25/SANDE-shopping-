@@ -4,12 +4,12 @@ export const metadata = {
   metadataBase: new URL("https://sande-electronic.vercel.app"),
 
   title: {
-    default: "SANDE ELECTRONIC | Electronics in Rwanda",
+    default: "SANDE ELECTRONIC | Quality Electronics in Rwanda",
     template: "%s | SANDE ELECTRONIC",
   },
 
   description:
-    "SANDE ELECTRONIC is a trusted online electronics store in Rwanda. Discover smartphones, laptops, headphones, smart watches and other quality electronics with great offers.",
+    "SANDE ELECTRONIC is a modern Rwanda-based electronics marketplace. Discover quality smartphones, laptops, TVs, audio products, accessories, smart devices and more.",
 
   applicationName: "SANDE ELECTRONIC",
 
@@ -17,12 +17,16 @@ export const metadata = {
     "SANDE ELECTRONIC",
     "electronics Rwanda",
     "electronics shop Rwanda",
-    "online electronics store Rwanda",
-    "buy electronics Rwanda",
+    "online electronics Rwanda",
+    "electronics marketplace Rwanda",
     "smartphones Rwanda",
     "laptops Rwanda",
+    "TV Rwanda",
     "headphones Rwanda",
+    "speakers Rwanda",
     "smart watches Rwanda",
+    "phone accessories Rwanda",
+    "power banks Rwanda",
     "online shopping Rwanda",
   ],
 
@@ -47,21 +51,32 @@ export const metadata = {
     },
   },
 
+  alternates: {
+    canonical: "https://sande-electronic.vercel.app",
+  },
+
   openGraph: {
-    title: "SANDE ELECTRONIC | Electronics in Rwanda",
+    title: "SANDE ELECTRONIC | Quality Electronics in Rwanda",
+
     description:
-      "Discover quality electronics, special offers and new products from SANDE ELECTRONIC.",
+      "Shop quality electronics in Rwanda. Discover products, deals, new arrivals and request products that are not currently in stock.",
+
     url: "https://sande-electronic.vercel.app",
+
     siteName: "SANDE ELECTRONIC",
+
     locale: "en_RW",
+
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "SANDE ELECTRONIC",
+
+    title: "SANDE ELECTRONIC | Quality Electronics in Rwanda",
+
     description:
-      "Shop quality electronics online from SANDE ELECTRONIC in Rwanda.",
+      "Discover quality electronics, smart shopping and trusted service from SANDE ELECTRONIC.",
   },
 };
 
